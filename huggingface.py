@@ -13,7 +13,7 @@ load_dotenv()
 
 
 API_URL = "https://api-inference.huggingface.co/models/j-hartmann/emotion-english-distilroberta-base"
-headers = {"Authorization": "Bearer " + st.secrets("HUGGINGFACE_API")}
+headers = {"Authorization": "Bearer " + st.secrets["HUGGINGFACE_API"]}
 
 st.title("Seniment Model from Huggingface")
 st.write("Model - j-hartmann/emotion-english-distilroberta-base")
