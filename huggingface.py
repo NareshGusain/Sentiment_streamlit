@@ -20,9 +20,11 @@ st.write("Model - j-hartmann/emotion-english-distilroberta-base")
 
 text = st.text_input(label="Enter your sentence")
 
-def query(text):
-	response = requests.post(API_URL, headers=headers, json=text)
-	return response.json()
+OK = st.button('Process')
+if OK:
+	def query(text):
+		response = requests.post(API_URL, headers=headers, json=text)
+		return response.json()
 	
 output = query({
 	"inputs": text,
